@@ -1,0 +1,216 @@
+.main-container {
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  
+  .main-text-container {
+    margin-bottom: 20px;
+    h3 {
+      font-weight: 900;
+      font-size: 20px;
+    }
+  
+    div {
+      border: 2px $bar solid;
+      width: 4rem;
+    }
+  }
+  
+  .main-gallery {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .main-gallery-carousel {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .main-gallery-card {
+    display: flex;
+    overflow: hidden;
+  
+  }
+  
+  .main-gallery-card:last-child {
+    display: none;
+  }
+  
+  .main-gallery-arrow {
+  
+    $marginArrow: 1.5rem;
+  
+    &--left,
+    &--right {
+      width: 13px;
+      cursor: pointer;
+    }
+  
+    &--left {
+      margin-right: $marginArrow;
+    }
+  
+    &--right {
+      margin-left: $marginArrow;
+    }
+  }
+  
+  .main-gallery-product {
+    width: 215px;
+    margin-right: 35px;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  .main-gallery-image {
+    width: 100%;
+  }
+  
+  .main-gallery-off {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 0;
+    border-top: 75px solid $main-2;
+    border-left: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+  
+    &::after {
+      content: "OFF";
+      position: absolute;
+      top: -60px;
+      right: 8px;
+      font-size: 16px;
+      font-weight: 900;
+      color: #fff;
+    }
+  }
+  
+  .main-gallery-product-description:hover,
+  .main-gallery-product:hover .main-gallery-product-description {
+    background: $selectedItem;
+  }
+  
+  .main-gallery-product-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  
+  }
+  
+  .main-gallery-title {
+    font-size: 12px;
+    color: $main-1;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    text-align: center;
+  }
+  
+  .main-gallery-star-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  
+  .main-star {
+    margin-right: 0.4rem;
+    color: $main-2;
+    font-size: 0.7rem;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  .main-gallery-listprice {
+    font-size: 12px;
+    color: $main-1;
+    margin-bottom: 2px;
+  }
+  
+  .main-gallery-price {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  
+  .main-gallery-installment {
+    font-size: 11px;
+    color: $main-1;
+    margin-bottom: 8px;
+  }
+  
+  .main-gallery-button {
+    background: $main-3;
+    color: #FFF;
+    padding: 7px 30px;
+    text-align: center;
+    width: 125px;
+    border-radius: 5px;
+    cursor: pointer;
+  
+    transition: background .3s ease;
+  
+    &:hover {
+      background: lighten($color: #000, $amount: 20)
+    }
+  }
+  
+  .main-dots {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+  }
+  
+  @media screen and (max-width: $desktop) {
+  
+    .main-gallery-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 1rem;
+      justify-content: center;
+      justify-items: center;
+    }
+  
+    .main-gallery-product {
+      margin-right: 0;
+    }
+  }
+  
+  @media screen and (max-width: $tablet-768) {
+    .main-gallery-arrow {
+  
+      $marginArrow: 0rem;
+    
+      &--left {
+        margin-right: $marginArrow;
+      }
+    
+      &--right {
+        margin-left: $marginArrow;
+      }
+    }
+  
+    .main-gallery-product:nth-child(2n+3) {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: $tablet-600) {
+    .main-gallery-product:nth-child(1n+3) {
+      display: none;
+    }
+  
+    .main-dots {
+      visibility: visible;
+    }
+  }
+  
+

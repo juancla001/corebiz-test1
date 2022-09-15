@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from 'react';
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+import { Main } from './components/Main';
+import { Navbar } from './components/Navbar';
+import { Newsletter } from './components/Newsletter';
+import { initialState, shoppingReducer } from './reducers/shoppingReducer';
+import { CartContext } from './CartContext';
 
-function App() {
+
+export const App = () => {
+  
+  const [state, dispatch] = useReducer(shoppingReducer, initialState)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartContext.Provider value={{state, dispatch}}>
+      <div>
+        <Navbar />
+        <Header />
+        <Main />
+        <Newsletter />
+        <Footer />
+      </div>
+    </CartContext.Provider>
   );
 }
-
-export default App;

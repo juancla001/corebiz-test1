@@ -1,0 +1,29 @@
+@import './globals';
+@import './partials/navbar';
+@import './partials/header';
+@import './partials/dot';
+@import './partials/main';
+@import './partials/newsletter';
+@import './partials/footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $mainFontFamily;
+}
+
+.relative {
+  position: relative;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}

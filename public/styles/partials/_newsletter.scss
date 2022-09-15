@@ -1,0 +1,42 @@
+.newsletter-container {
+    background: $newsletter;
+    width: 100%;
+    height: 146px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    h2 {
+      font-size: 22px;
+      font-family: $secondFontFamily;
+      font-weight: 900;
+    }
+  }
+  
+  .newsletter-input {
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    margin-right: 9px;
+    font-family: $secondFontFamily;
+    width: 280px;
+  }
+  
+  .newsletter-form-container {
+    margin-top: 1rem;
+  }
+  
+  .newsletter-button {
+    padding: 1rem;
+    background: $main-3;
+    color: #FFF;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: $secondFontFamily;
+    width: 140px;
+  }
+ 

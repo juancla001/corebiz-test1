@@ -1,0 +1,93 @@
+.navbar-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 1rem 2rem;
+  }
+  #toggle {
+    display: none;
+  }
+  
+  .navbar-input-container {
+    width: 40rem;
+    border-bottom: 1px solid $main-1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-left: 130px;
+    margin-right: 45px;
+  
+    .navbar-input {
+      border: none;
+      outline: none;
+      width: 95%;
+    }
+  }
+  
+  .navbar-img {
+  
+    height: 41px;
+  
+    .navbar-logo {
+      fill: black;
+    }
+  }
+  
+  .navbar-ham {
+    display: none;
+    align-self: end;
+  
+    .navbar-ham-ico {
+      font-size: 30px;
+    }
+  }
+  
+  .navbar-user-container {
+    display: flex;
+    align-items: center;
+    visibility: visible;
+  
+    transition: visibility .3s ease;
+  
+    i {
+      margin-right: 7px;
+      color: $main-1;
+    }
+  }
+  
+  .navbar-cart-container {
+    display: flex;
+  }
+  
+  $badgeSize: 1rem;
+  
+  .navbar-cart-number {
+    background: $main-2;
+    border-radius: 50%;
+    width: $badgeSize;
+    height: $badgeSize;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-left: 0.3rem;
+  
+    span {
+      text-align: center;
+      font-size: 10px;
+      color: #FFF;
+      font-weight: 700;
+    }
+  }
+  
+  .navbar-user-text {
+    color: $main-1;
+  }
+  
+  .navbar-ico-size {
+    height: $icoSize;
+  }
+  
+  
